@@ -99,7 +99,7 @@ export const resolvers = {
             return false;
           if (typeof value === 'string') {
             if (value.startsWith('%') && value.endsWith('%'))
-              return client[field].includes(value.substr(1, value.length - 2));
+              return client[field].includes(value.substr(1, value.length - 1));
             if (value.startsWith('%'))
               return client[field].endsWith(value.substr(1));
             if (value.endsWith('%'))
